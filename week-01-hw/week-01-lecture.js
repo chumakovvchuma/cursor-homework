@@ -28,7 +28,7 @@ const cash = 500;
 const surrender = cash - fullPrize;
 console.log(surrender, "surrender");
 
-const averagePrize = fullPrize / 2;
+const averagePrize = fullPrize / 3;
 const floorAveragePrize = Math.floor(averagePrize * 100) / 100;
 console.log(floorAveragePrize, "average prize");
 
