@@ -3,10 +3,11 @@
 //1
 let numberNAnswer = prompt("write N");
 let intNumberN = parseInt(numberNAnswer);
-
+let typeN = typeof intNumberN;
+console.log(typeN);
 
 //2
-if ((intNumberN ^ 0) === intNumberN){
+if ((intNumberN ^ 0 && typeN === number) === intNumberN){
     console.log(true);
 } else {
     console.log(false);
@@ -16,10 +17,10 @@ if ((intNumberN ^ 0) === intNumberN){
 //3
 let numberMAnswer = prompt("write M");
 let intNumberM = parseInt(numberMAnswer);
-
+let typeM = typeof intNumberM;
 
 //4
-if ((intNumberM ^ 0) === intNumberM){
+if ((intNumberM ^ 0 && typeM === number) === intNumberM){
     console.log(true);
 } else {
     console.log(false);
@@ -48,6 +49,9 @@ for (let i = intNumberN; i <= intNumberM; i++) {
 
 
   
+
+
+
 
 
 

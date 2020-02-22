@@ -29,3 +29,5 @@ function getRandomPassword() {
     console.log("task 8", pass);
 }
 getRandomPassword();
+
+
