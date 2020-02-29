@@ -1,51 +1,32 @@
 
-
-//1
-let numberNAnswer = prompt("write N");
-let intNumberN = parseInt(numberNAnswer);
-let typeN = typeof intNumberN;
-console.log(typeN);
-
-//2
-if ((intNumberN ^ 0 && typeN === number) === intNumberN){
-    console.log(true);
+  let numN = parseInt(prompt("number N")),
+    numM = parseInt(prompt("number M"));
+while (isNaN(numN)) {
+    numN = parseInt(prompt("number N"), 10);
+}
+while (isNaN(numM)) {
+    numM = parseInt(prompt("number M"), 10);
+} 
+let sum = 0,
+    question = confirm("consider paired numbers?");
+if(question) {
+    for (let i = numN; i < numM +1; i++) {
+        sum += i;
+    }
+} else if (question == false && (numN % 2 == 0)) {
+    for (let i = numN + 1; i < numM +1; i += 2) {
+    sum += i;
+    }
 } else {
-    console.log(false);
-};
-
-
-//3
-let numberMAnswer = prompt("write M");
-let intNumberM = parseInt(numberMAnswer);
-let typeM = typeof intNumberM;
-
-//4
-if ((intNumberM ^ 0 && typeM === number) === intNumberM){
-    console.log(true);
-} else {
-    console.log(false);
-};
-
-//5
-let confirmNumber = confirm("dont need even int?");
-
-
-let sumA = 0;
-for (let i = intNumberN; i <= intNumberM; i++) {
-    if (confirmNumber = true) {
-        if (i % 2 == 0) {
-            sumA += 0;
-        } else {
-            sumA += i;
-        };
-    } else {
-        sumA += i;
-    };
-
-  }
-  console.log("sum int", sumA);
-
-
+    for (let i = numN; i < numM +1; i += 2) {
+    sum += i;
+    }
+}
+document.write(`
+number N - ${numN} </br>
+number M - ${numM} </br>
+sum - ${sum} </br>
+`);
 
 
   
